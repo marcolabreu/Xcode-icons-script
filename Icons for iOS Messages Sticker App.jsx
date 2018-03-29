@@ -5,6 +5,7 @@
 	See included README and LICENSE for details.
 
 	Modifications 
+		Copyright (c) 2018 Marco L Abreu
 		Copyright (c) 2014 Jesse Squires
 		Copyright (c) 2012 Josh Jones
 
