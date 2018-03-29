@@ -60,19 +60,20 @@ function main() {
 		}
 		
 		var narrowIcons = [
-		   {"name": "Messages-App-Store-1024x768", "w":1024, "h":768},
+			{"name": "2@2x-Messages-iPhone-60x45pt", "w":120, "h":90},
+		  	{"name": "2@3x-Messages-iPhone-60x45pt", "w":180, "h":135},
 	        
-		   {"name": "Messages-27x20@2x", "w":54, "h":40},
-		   {"name": "Messages-27x20@3x", "w":81, "h":60},
-	        
-		   {"name": "Messages-32x24@2x", "w":64, "h":48},
-		   {"name": "Messages-32x24@3x", "w":96, "h":72},
+		   	{"name": "4@2x-Messages-iPad-67x50pt", "w":134, "h":100},
 
-		   {"name": "Messages-iPhone-60x45@2x", "w":120, "h":90},
-		   {"name": "Messages-iPhone-60x45@3x", "w":180, "h":135},
+		   	{"name": "5@2x-Messages-iPad-Pro-74x55pt", "w":148, "h":110}, 
+
+		   	{"name": "7@1x-Messages-App-Store-1024x768pt", "w":1024, "h":768},    
+		  	
+		  	{"name": "8@2x-Messages-27x20pt", "w":54, "h":40},
+		  	{"name": "8@3x-Messages-27x20pt", "w":81, "h":60},
 	        
-		   {"name": "Messages-iPad-67x50@2x", "w":134, "h":100},
-		   {"name": "Messages-iPad-Pro-74x55@2x", "w":148, "h":110},     
+		  	{"name": "9@2x-Messages-32x24pt", "w":64, "h":48},
+		   	{"name": "9@3x-Messages-32x24pt", "w":96, "h":72},
 		];
 
 		//	delete metadata
@@ -86,11 +87,6 @@ function main() {
 			narrowImage.resizeImage(eachNarrowIcon.w, eachNarrowIcon.h, null, ResampleMethod.BICUBICSHARPER);
 
 			var destFileName = eachNarrowIcon.name + ".png";
-
-			if (eachNarrowIcon.name == "iTunesArtwork@2x" || eachNarrowIcon.name == "iTunesArtwork") {
-				// iTunesArtwork files don't have an extension
-				destFileName = eachNarrowIcon.name;
-			}
 
 			narrowImage.exportDocument(new File(destFolder + "/" + destFileName), ExportType.SAVEFORWEB, saveForWeb);
 
@@ -108,13 +104,13 @@ function main() {
 			return;
 		}
 
-		var squareIcons = [
-	   		{"name": "App-Store-iOS-1024", "w":1024, "h":1024},
+		var squareIcons = [        
+	   		{"name": "1@2x-iPhone-Settings-29x29pt", "w":58, "h":58},
+	   		{"name": "1@3x-iPhone-Settings-29x29pt", "w":87, "h":87},
         
-	   		{"name": "iPhone-Settings-29x29@2x", "w":58, "h":58},
-	   		{"name": "iPhone-Settings-29x29@3x", "w":87, "h":87},
-        
-	   		{"name": "iPad-Settings-29x29@2x", "w":58, "h":58},       
+	   		{"name": "3@2x-iPad-Settings-29x29pt", "w":58, "h":58},
+
+	   		{"name": "6@1x-App-Store-iOS-1024pt", "w":1024, "h":1024},     
 		];
 
 		//	delete metadata
@@ -128,11 +124,6 @@ function main() {
 			squareImage.resizeImage(eachSquareIcon.w, eachSquareIcon.h, null, ResampleMethod.BICUBICSHARPER);
 
 			var destFileName = eachSquareIcon.name + ".png";
-
-			if (eachSquareIcon.name == "iTunesArtwork@2x" || eachSquareIcon.name == "iTunesArtwork") {
-				// iTunesArtwork files don't have an extension
-				destFileName = eachSquareIcon.name;
-			}
 
 			squareImage.exportDocument(new File(destFolder + "/" + destFileName), ExportType.SAVEFORWEB, saveForWeb);
 
