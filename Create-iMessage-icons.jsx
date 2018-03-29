@@ -32,7 +32,7 @@ function main() {
 	var squareSourceFile = File.openDialog("Select a 1:1 sqaure PNG file that is at least 1024x1024.", "*.png", false);
 
 	if (narrowSourceFile == null && squareSourceFile == null)  {
-		// user canceled
+		alert("At least one file must be selected.");
 		return;
 	}
 
