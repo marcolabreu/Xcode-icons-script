@@ -1,12 +1,22 @@
-# iOS-icons-script
+# Xcode-icons-script
 
-*Photoshop script to generate all iOS App Icon PNGs*
+## JavaScript Photoshop script to generate all app icons for Xcode
 
-Make a 1024x1024 **PNG-24** image for regular iOS or Mac apps. For Apple Messages Sticker apps, make also a 1024x768 **PNG-24** image.
+Make a 1024x1024 PNG image for regular iOS or Mac apps. For Apple Messages Sticker apps, make also a 1024x768 PNG image.
 
-The scripts will create all of your app icon images from a single 1024x1024 PNG. It saves icons in PNG-24 using *Save For Web* and removes metadata. To facilitate installation, the generated PNGs names will sort them in the exact order they appear in Xcode. The naming scheme is `<icon-group@density>-<partial-Xcode-name>-<reference-size>`. For example the file `5@2x-iPad-Notifications-20pt.png` will go into the 5th iOS app icon group, 2x slot. While the characters before the first dash would sufice to find the slot in Xcode, part of the slot's name and the size are also used to eliminate any doubt.
+The scripts will create all images required to fill all the icon slots in Xcode. Images are generated in **PGN-24** format using *Save For Web* and all metadata is removed.
 
-Some generated files will have different names but exactly the same size. **This is the intended behavior**: the idea is to have one file for each slot thus coverting the icon installation i Xcode into a brainless drag and drop.
+## File names
+
+Some generated files will have different names but exactly the same size. **This is the intended behavior**. The idea is to have one file for each slot thus converting the icon installation in Xcode into a brainless drag and drop operation. 
+
+The generated file names will sort the images in the order their slots appear in Xcode. For the purposes of the naming scheme, icon group is defined as a set of icons that share in Xcode the same name reference and are only differentiated by their size multiplier. 
+
+### Naming scheme
+
+The naming scheme is `<iconGroup@sizeMultiplier>-<partial-Xcode-reference-name>-<reference-size>`, which gives enough information to find where the image file goes and double check it if necessary. 
+
+The characters before the first dash should suffice to find the correct slot in Xcode. For example the file `5@2x-iPad-Notifications-20pt.png` will go into the 5th iOS app icon group, 2x slot. The rest of the name is there to eliminate any doubt.
 
 ## Installation
 
