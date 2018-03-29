@@ -53,4 +53,4 @@ The scripts do not handle naming collisions and **will overwrite any existing fi
 
 Modified and currently maintained by [@marcolabreu](https://github.com/marcolabreu)
 
-Forked from @jessesquires](https://github.com/jessesquires) [version](https://github.com/jessesquires/iOS-icons-script) of @appsbynight's mod of the original script by @mattdipasquale.
+Forked from [@jessesquires](https://github.com/jessesquires)'s [version](https://github.com/jessesquires/iOS-icons-script) of @appsbynight's mod of the original script by @mattdipasquale.
