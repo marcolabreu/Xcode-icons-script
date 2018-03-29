@@ -27,14 +27,14 @@ function main() {
 
 	var doc = open(sourceFile, OpenDocumentType.PNG);
 	if (doc == null) {
-		alert("Oh shit!\nSomething is wrong with the file. Make sure it is a valid PNG file.");
+		alert("Something is wrong with the file. Make sure it is a valid PNG file.");
 		return;
 	}
 
 	app.preferences.rulerUnits = Units.PIXELS;
 
 	if (doc.width != doc.height || doc.width < 1024 || doc.height < 1024) {
-		alert("What the fuck is this?!\nImage failed validation. Please select a 1:1 sqaure PNG file that is at least 1024x1024.");
+		alert("Image failed validation. Please select a 1:1 PNG file that is at least 1024x1024.");
 		restorePrefs();
 		return;
 	}
@@ -57,39 +57,33 @@ function main() {
 	doc.info = null;
 
 	var icons = [
-		{"name": "iTunesArtwork@2x", "size":1024},
-		{"name": "iTunesArtwork", "size":512},
+		{"name": "1@2x-iPhone-Notifications-20pt", "size":40},
+		{"name": "1@3x-iPhone-Notifications-20pt", "size":60},
 
-		{"name": "Icon-29", "size":29},
-		{"name": "Icon-29@2x", "size":58},
-		{"name": "Icon-29@3x", "size":87},
+		{"name": "2@2x-iPhone-Spotlight-Settings-29pt", "size":58},
+		{"name": "2@3x-iPhone-Spotlight-Settings-29pt", "size":87},
 
-        {"name": "Icon-20", "size":20},
-        {"name": "Icon-20@2x", "size":40},
-        {"name": "Icon-20@3x", "size":60},
+		{"name": "3@2x-iPhone-Spotlight-40pt", "size":80},
+		{"name": "3@3x-iPhone-Spotlight-40pt", "size":120},
 
-		{"name": "Icon-40", "size":40},
-		{"name": "Icon-40@2x", "size":80},
-		{"name": "Icon-40@3x", "size":120},
+		{"name": "4@2x-iPhone-App-iOS-60pt", "size":120},
+		{"name": "4@3x-iPhone-App-iOS-60pt", "size":180},
 
-		{"name": "Icon-50", "size":50},
-		{"name": "Icon-50@2x", "size":100},
+		{"name": "5@1x-iPad-Notifications-20pt", "size":20},
+		{"name": "5@2x-iPad-Notifications-20pt", "size":40},
 
-		{"name": "Icon-57", "size":57},
-		{"name": "Icon-57@2x", "size":114},
+		{"name": "6@1x-iPad-Settings-29pt", "size":29},
+		{"name": "6@2x-iPad-Settings-29pt", "size":58},
 
-		{"name": "Icon-60@2x", "size":120},
-		{"name": "Icon-60@3x", "size":180},
+		{"name": "7@1x-iPad-Spotlight-40pt", "size":40},
+		{"name": "7@2x-iPad-Spotlight-40pt", "size":80},
 
-		{"name": "Icon-72", "size":72},
-		{"name": "Icon-72@2x", "size":144},
+		{"name": "8@1x-iPad-App-76pt", "size":76},
+		{"name": "8@2x-iPad-App-76pt", "size":152},
 
-		{"name": "Icon-76", "size":76},
-		{"name": "Icon-76@2x", "size":152},
+		{"name": "9@2x-iPad-Pro-83.5pt", "size":167},
 
-		{"name": "Icon-120", "size":120},
-
-		{"name": "Icon-83-5@2x", "size":167},
+		{"name": "10@1x-App-Store-1024pt", "size":1024},
 	];
 
 	var initialState = doc.activeHistoryState;
@@ -101,18 +95,13 @@ function main() {
 
 		var destFileName = eachIcon.name + ".png";
 
-		if (eachIcon.name == "iTunesArtwork@2x" || eachIcon.name == "iTunesArtwork") {
-			// iTunesArtwork files don't have an extension
-			destFileName = eachIcon.name;
-		}
-
 		doc.exportDocument(new File(destFolder + "/" + destFileName), ExportType.SAVEFORWEB, saveForWeb);
 
 		// undo resize
 		doc.activeHistoryState = initialState;
 	}
 
-	alert("Success!\nAll iOS icons created and saved. Fuck yeah. 🎉 🍺");
+	alert("All iOS icons created and saved.");
 
 	doc.close(SaveOptions.DONOTSAVECHANGES);
 
