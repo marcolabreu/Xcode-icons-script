@@ -39,10 +39,10 @@ The scripts do not handle naming collisions and **will overwrite any existing fi
 
 ## Credits
 
-Modified and maintained by [@marcolabreu](https://github.com/marcolabreu)
+Modified and currently maintained by [@marcolabreu](https://github.com/marcolabreu)
 
-Original [script](https://gist.github.com/mattdipasquale/711203) by [@mattdipasquale](https://github.com/mattdipasquale)
+Original script by @mattdipasquale
 
-First [modified](https://gist.github.com/appsbynight/3681050) by [@appsbynight](https://github.com/appsbynight)
+Modified by @appsbynight
 
-Then [modified](https://github.com/jessesquires/iOS-icons-script) by [@jessesquires](https://github.com/jessesquires)
+Later [modified](https://github.com/jessesquires/iOS-icons-script) by [@jessesquires](https://github.com/jessesquires)
