@@ -2,9 +2,9 @@
 
 *Photoshop script to generate all iOS App Icon PNGs*
 
-Make one 1024x1024 App Icon, let this script [automate](http://xkcd.com/1319/) the rest.
+Make a 1024x1024 **PNG-24** image for regular iOS or Mac apps. For Apple Messages Sticker apps, make also a 1024x768 **PNG-24** image.
 
-This script will create all of your app icon images from a single 1024x1024 "iTunesArtwork" PNG. It saves icons in **PNG-24** using *Save For Web* and removes metadata. The generated PNGs are named with the following scheme: `Name-in-Xcode-with-size<@density-if-not-1x>.png`, for example `App-Store-iOS-1024.png` and `iPad-Settings-29x29@2x`.
+The scripts will create all of your app icon images from a single 1024x1024 PNG. It saves icons in PNG-24 using *Save For Web* and removes metadata. To facilitate installation, the generated PNGs names will sort them in the exact order they appear in Xcode. The naming scheme is `<icon-group@density>-<partial-Xcode-name>-<reference-size>`. For example the file `5@2x-iPad-Notifications-20pt.png` will go into the 5th iOS app icon group, 2x slot. While the characters before the first dash would sufice to find the slot in Xcode, part of the slot's name and the size are also used to eliminate any doubt. 
 
 ## Installation
 
