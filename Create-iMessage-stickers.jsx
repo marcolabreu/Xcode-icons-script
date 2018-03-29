@@ -27,7 +27,7 @@ function main() {
 
 	var doc = open(sourceFile, OpenDocumentType.PNG);
 	if (doc == null) {
-		alert("Oh shit!\nSomething is wrong with the file. Make sure it is a valid PNG file.");
+		alert("Something is wrong with the file. Make sure it is a valid PNG file.");
 		return;
 	}
 
